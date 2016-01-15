@@ -7,25 +7,100 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		43EAF6D91C46389400AD213A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EAF6D81C46389400AD213A /* main.m */; };
-		43EAF6DC1C46389400AD213A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EAF6DB1C46389400AD213A /* AppDelegate.m */; };
+		43125A261C48F1F80062019F /* resources.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 43125A251C48F1F80062019F /* resources.cfg */; };
+		43125A281C48F30C0062019F /* Media in Resources */ = {isa = PBXBuildFile; fileRef = 43125A271C48F30C0062019F /* Media */; };
+		43EAF6D91C46389400AD213A /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 43EAF6D81C46389400AD213A /* main.mm */; };
+		43EAF6DC1C46389400AD213A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 43EAF6DB1C46389400AD213A /* AppDelegate.mm */; };
 		43EAF6DF1C46389400AD213A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EAF6DE1C46389400AD213A /* ViewController.m */; };
 		43EAF6E21C46389400AD213A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43EAF6E01C46389400AD213A /* Main.storyboard */; };
 		43EAF6E41C46389400AD213A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43EAF6E31C46389400AD213A /* Assets.xcassets */; };
 		43EAF6E71C46389400AD213A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43EAF6E51C46389400AD213A /* LaunchScreen.storyboard */; };
+		43EAF6EF1C46BDF200AD213A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF6EE1C46BDF200AD213A /* OpenGLES.framework */; };
+		43EAF6F11C46BE0000AD213A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF6F01C46BE0000AD213A /* QuartzCore.framework */; };
+		43EAF6F31C46BE0600AD213A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF6F21C46BE0600AD213A /* UIKit.framework */; };
+		43EAF6F51C46BE0B00AD213A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF6F41C46BE0B00AD213A /* CoreGraphics.framework */; };
+		43EAF6F91C46BE1B00AD213A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF6F61C46BE1B00AD213A /* AVFoundation.framework */; };
+		43EAF6FA1C46BE1B00AD213A /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF6F71C46BE1B00AD213A /* CoreFoundation.framework */; };
+		43EAF6FB1C46BE1B00AD213A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF6F81C46BE1B00AD213A /* Foundation.framework */; };
+		43EAF7021C46BE4200AD213A /* libboost_atomic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF6FD1C46BE4200AD213A /* libboost_atomic.a */; };
+		43EAF7031C46BE4200AD213A /* libboost_chrono.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF6FE1C46BE4200AD213A /* libboost_chrono.a */; };
+		43EAF7041C46BE4200AD213A /* libboost_date_time.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF6FF1C46BE4200AD213A /* libboost_date_time.a */; };
+		43EAF7051C46BE4200AD213A /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF7001C46BE4200AD213A /* libboost_system.a */; };
+		43EAF7061C46BE4200AD213A /* libboost_thread.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF7011C46BE4200AD213A /* libboost_thread.a */; };
+		43EAF71A1C46BEB800AD213A /* libFreeImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF7071C46BEB800AD213A /* libFreeImage.a */; };
+		43EAF71B1C46BEB800AD213A /* libFreeType.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF7081C46BEB800AD213A /* libFreeType.a */; };
+		43EAF71C1C46BEB800AD213A /* libglsl_optimizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF7091C46BEB800AD213A /* libglsl_optimizer.a */; };
+		43EAF71D1C46BEB800AD213A /* libhlsl2glsl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF70A1C46BEB800AD213A /* libhlsl2glsl.a */; };
+		43EAF71E1C46BEB800AD213A /* libOgreMainStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF70B1C46BEB800AD213A /* libOgreMainStatic.a */; };
+		43EAF71F1C46BEB800AD213A /* libOgreOverlayStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF70C1C46BEB800AD213A /* libOgreOverlayStatic.a */; };
+		43EAF7201C46BEB800AD213A /* libOgrePagingStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF70D1C46BEB800AD213A /* libOgrePagingStatic.a */; };
+		43EAF7211C46BEB800AD213A /* libOgrePropertyStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF70E1C46BEB800AD213A /* libOgrePropertyStatic.a */; };
+		43EAF7221C46BEB800AD213A /* libOgreRTShaderSystemStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF70F1C46BEB800AD213A /* libOgreRTShaderSystemStatic.a */; };
+		43EAF7231C46BEB800AD213A /* libOgreTerrainStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF7101C46BEB800AD213A /* libOgreTerrainStatic.a */; };
+		43EAF7241C46BEB800AD213A /* libOgreVolumeStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF7111C46BEB800AD213A /* libOgreVolumeStatic.a */; };
+		43EAF7251C46BEB800AD213A /* libOIS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF7121C46BEB800AD213A /* libOIS.a */; };
+		43EAF7261C46BEB800AD213A /* libPlugin_BSPSceneManagerStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF7131C46BEB800AD213A /* libPlugin_BSPSceneManagerStatic.a */; };
+		43EAF7271C46BEB800AD213A /* libPlugin_OctreeSceneManagerStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF7141C46BEB800AD213A /* libPlugin_OctreeSceneManagerStatic.a */; };
+		43EAF7281C46BEB800AD213A /* libPlugin_OctreeZoneStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF7151C46BEB800AD213A /* libPlugin_OctreeZoneStatic.a */; };
+		43EAF7291C46BEB800AD213A /* libPlugin_ParticleFXStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF7161C46BEB800AD213A /* libPlugin_ParticleFXStatic.a */; };
+		43EAF72A1C46BEB800AD213A /* libPlugin_PCZSceneManagerStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF7171C46BEB800AD213A /* libPlugin_PCZSceneManagerStatic.a */; };
+		43EAF72B1C46BEB800AD213A /* libRenderSystem_GLES2Static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF7181C46BEB800AD213A /* libRenderSystem_GLES2Static.a */; };
+		43EAF72C1C46BEB800AD213A /* libzzip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF7191C46BEB800AD213A /* libzzip.a */; };
+		43EAF72E1C46BEC900AD213A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EAF72D1C46BEC900AD213A /* libz.tbd */; };
+		43EAF7341C46C39E00AD213A /* BaseApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43EAF7321C46C39E00AD213A /* BaseApplication.cpp */; };
+		43EAF7351C46C39E00AD213A /* TutorialApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43EAF7331C46C39E00AD213A /* TutorialApplication.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43125A211C4773530062019F /* OgreStaticPluginLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OgreStaticPluginLoader.h; sourceTree = "<group>"; };
+		43125A251C48F1F80062019F /* resources.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = resources.cfg; sourceTree = "<group>"; };
+		43125A271C48F30C0062019F /* Media */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Media; sourceTree = "<group>"; };
 		43EAF6D41C46389400AD213A /* TestOrge3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestOrge3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		43EAF6D81C46389400AD213A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		43EAF6D81C46389400AD213A /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		43EAF6DA1C46389400AD213A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		43EAF6DB1C46389400AD213A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		43EAF6DB1C46389400AD213A /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		43EAF6DD1C46389400AD213A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		43EAF6DE1C46389400AD213A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		43EAF6E11C46389400AD213A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43EAF6E31C46389400AD213A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43EAF6E61C46389400AD213A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43EAF6E81C46389400AD213A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43EAF6EE1C46BDF200AD213A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		43EAF6F01C46BE0000AD213A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		43EAF6F21C46BE0600AD213A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		43EAF6F41C46BE0B00AD213A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		43EAF6F61C46BE1B00AD213A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		43EAF6F71C46BE1B00AD213A /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		43EAF6F81C46BE1B00AD213A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		43EAF6FD1C46BE4200AD213A /* libboost_atomic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_atomic.a; path = OgreSDK/lib/libboost_atomic.a; sourceTree = "<group>"; };
+		43EAF6FE1C46BE4200AD213A /* libboost_chrono.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_chrono.a; path = OgreSDK/lib/libboost_chrono.a; sourceTree = "<group>"; };
+		43EAF6FF1C46BE4200AD213A /* libboost_date_time.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_date_time.a; path = OgreSDK/lib/libboost_date_time.a; sourceTree = "<group>"; };
+		43EAF7001C46BE4200AD213A /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = OgreSDK/lib/libboost_system.a; sourceTree = "<group>"; };
+		43EAF7011C46BE4200AD213A /* libboost_thread.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_thread.a; path = OgreSDK/lib/libboost_thread.a; sourceTree = "<group>"; };
+		43EAF7071C46BEB800AD213A /* libFreeImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFreeImage.a; path = OgreSDK/lib/Release/libFreeImage.a; sourceTree = "<group>"; };
+		43EAF7081C46BEB800AD213A /* libFreeType.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFreeType.a; path = OgreSDK/lib/Release/libFreeType.a; sourceTree = "<group>"; };
+		43EAF7091C46BEB800AD213A /* libglsl_optimizer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglsl_optimizer.a; path = OgreSDK/lib/Release/libglsl_optimizer.a; sourceTree = "<group>"; };
+		43EAF70A1C46BEB800AD213A /* libhlsl2glsl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhlsl2glsl.a; path = OgreSDK/lib/Release/libhlsl2glsl.a; sourceTree = "<group>"; };
+		43EAF70B1C46BEB800AD213A /* libOgreMainStatic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOgreMainStatic.a; path = OgreSDK/lib/Release/libOgreMainStatic.a; sourceTree = "<group>"; };
+		43EAF70C1C46BEB800AD213A /* libOgreOverlayStatic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOgreOverlayStatic.a; path = OgreSDK/lib/Release/libOgreOverlayStatic.a; sourceTree = "<group>"; };
+		43EAF70D1C46BEB800AD213A /* libOgrePagingStatic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOgrePagingStatic.a; path = OgreSDK/lib/Release/libOgrePagingStatic.a; sourceTree = "<group>"; };
+		43EAF70E1C46BEB800AD213A /* libOgrePropertyStatic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOgrePropertyStatic.a; path = OgreSDK/lib/Release/libOgrePropertyStatic.a; sourceTree = "<group>"; };
+		43EAF70F1C46BEB800AD213A /* libOgreRTShaderSystemStatic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOgreRTShaderSystemStatic.a; path = OgreSDK/lib/Release/libOgreRTShaderSystemStatic.a; sourceTree = "<group>"; };
+		43EAF7101C46BEB800AD213A /* libOgreTerrainStatic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOgreTerrainStatic.a; path = OgreSDK/lib/Release/libOgreTerrainStatic.a; sourceTree = "<group>"; };
+		43EAF7111C46BEB800AD213A /* libOgreVolumeStatic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOgreVolumeStatic.a; path = OgreSDK/lib/Release/libOgreVolumeStatic.a; sourceTree = "<group>"; };
+		43EAF7121C46BEB800AD213A /* libOIS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOIS.a; path = OgreSDK/lib/Release/libOIS.a; sourceTree = "<group>"; };
+		43EAF7131C46BEB800AD213A /* libPlugin_BSPSceneManagerStatic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPlugin_BSPSceneManagerStatic.a; path = OgreSDK/lib/Release/libPlugin_BSPSceneManagerStatic.a; sourceTree = "<group>"; };
+		43EAF7141C46BEB800AD213A /* libPlugin_OctreeSceneManagerStatic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPlugin_OctreeSceneManagerStatic.a; path = OgreSDK/lib/Release/libPlugin_OctreeSceneManagerStatic.a; sourceTree = "<group>"; };
+		43EAF7151C46BEB800AD213A /* libPlugin_OctreeZoneStatic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPlugin_OctreeZoneStatic.a; path = OgreSDK/lib/Release/libPlugin_OctreeZoneStatic.a; sourceTree = "<group>"; };
+		43EAF7161C46BEB800AD213A /* libPlugin_ParticleFXStatic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPlugin_ParticleFXStatic.a; path = OgreSDK/lib/Release/libPlugin_ParticleFXStatic.a; sourceTree = "<group>"; };
+		43EAF7171C46BEB800AD213A /* libPlugin_PCZSceneManagerStatic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPlugin_PCZSceneManagerStatic.a; path = OgreSDK/lib/Release/libPlugin_PCZSceneManagerStatic.a; sourceTree = "<group>"; };
+		43EAF7181C46BEB800AD213A /* libRenderSystem_GLES2Static.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRenderSystem_GLES2Static.a; path = OgreSDK/lib/Release/libRenderSystem_GLES2Static.a; sourceTree = "<group>"; };
+		43EAF7191C46BEB800AD213A /* libzzip.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzzip.a; path = OgreSDK/lib/Release/libzzip.a; sourceTree = "<group>"; };
+		43EAF72D1C46BEC900AD213A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		43EAF7301C46C39E00AD213A /* BaseApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseApplication.h; sourceTree = "<group>"; };
+		43EAF7311C46C39E00AD213A /* TutorialApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialApplication.h; sourceTree = "<group>"; };
+		43EAF7321C46C39E00AD213A /* BaseApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseApplication.cpp; sourceTree = "<group>"; };
+		43EAF7331C46C39E00AD213A /* TutorialApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TutorialApplication.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,15 +108,56 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43EAF72E1C46BEC900AD213A /* libz.tbd in Frameworks */,
+				43EAF6F91C46BE1B00AD213A /* AVFoundation.framework in Frameworks */,
+				43EAF6FA1C46BE1B00AD213A /* CoreFoundation.framework in Frameworks */,
+				43EAF6FB1C46BE1B00AD213A /* Foundation.framework in Frameworks */,
+				43EAF6F51C46BE0B00AD213A /* CoreGraphics.framework in Frameworks */,
+				43EAF6F31C46BE0600AD213A /* UIKit.framework in Frameworks */,
+				43EAF6F11C46BE0000AD213A /* QuartzCore.framework in Frameworks */,
+				43EAF6EF1C46BDF200AD213A /* OpenGLES.framework in Frameworks */,
+				43EAF7021C46BE4200AD213A /* libboost_atomic.a in Frameworks */,
+				43EAF7031C46BE4200AD213A /* libboost_chrono.a in Frameworks */,
+				43EAF7041C46BE4200AD213A /* libboost_date_time.a in Frameworks */,
+				43EAF7051C46BE4200AD213A /* libboost_system.a in Frameworks */,
+				43EAF7061C46BE4200AD213A /* libboost_thread.a in Frameworks */,
+				43EAF71A1C46BEB800AD213A /* libFreeImage.a in Frameworks */,
+				43EAF71B1C46BEB800AD213A /* libFreeType.a in Frameworks */,
+				43EAF71C1C46BEB800AD213A /* libglsl_optimizer.a in Frameworks */,
+				43EAF71D1C46BEB800AD213A /* libhlsl2glsl.a in Frameworks */,
+				43EAF71E1C46BEB800AD213A /* libOgreMainStatic.a in Frameworks */,
+				43EAF71F1C46BEB800AD213A /* libOgreOverlayStatic.a in Frameworks */,
+				43EAF7201C46BEB800AD213A /* libOgrePagingStatic.a in Frameworks */,
+				43EAF7211C46BEB800AD213A /* libOgrePropertyStatic.a in Frameworks */,
+				43EAF7221C46BEB800AD213A /* libOgreRTShaderSystemStatic.a in Frameworks */,
+				43EAF7231C46BEB800AD213A /* libOgreTerrainStatic.a in Frameworks */,
+				43EAF7241C46BEB800AD213A /* libOgreVolumeStatic.a in Frameworks */,
+				43EAF7251C46BEB800AD213A /* libOIS.a in Frameworks */,
+				43EAF7261C46BEB800AD213A /* libPlugin_BSPSceneManagerStatic.a in Frameworks */,
+				43EAF7271C46BEB800AD213A /* libPlugin_OctreeSceneManagerStatic.a in Frameworks */,
+				43EAF7281C46BEB800AD213A /* libPlugin_OctreeZoneStatic.a in Frameworks */,
+				43EAF7291C46BEB800AD213A /* libPlugin_ParticleFXStatic.a in Frameworks */,
+				43EAF72A1C46BEB800AD213A /* libPlugin_PCZSceneManagerStatic.a in Frameworks */,
+				43EAF72B1C46BEB800AD213A /* libRenderSystem_GLES2Static.a in Frameworks */,
+				43EAF72C1C46BEB800AD213A /* libzzip.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43125A241C48F1F80062019F /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				43125A251C48F1F80062019F /* resources.cfg */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
 		43EAF6CB1C46389400AD213A = {
 			isa = PBXGroup;
 			children = (
+				43EAF6FC1C46BE2E00AD213A /* Frameworks */,
 				43EAF6D61C46389400AD213A /* TestOrge3D */,
 				43EAF6D51C46389400AD213A /* Products */,
 			);
@@ -58,8 +174,9 @@
 		43EAF6D61C46389400AD213A /* TestOrge3D */ = {
 			isa = PBXGroup;
 			children = (
+				43EAF72F1C46C39600AD213A /* Ogre */,
 				43EAF6DA1C46389400AD213A /* AppDelegate.h */,
-				43EAF6DB1C46389400AD213A /* AppDelegate.m */,
+				43EAF6DB1C46389400AD213A /* AppDelegate.mm */,
 				43EAF6DD1C46389400AD213A /* ViewController.h */,
 				43EAF6DE1C46389400AD213A /* ViewController.m */,
 				43EAF6E01C46389400AD213A /* Main.storyboard */,
@@ -74,9 +191,70 @@
 		43EAF6D71C46389400AD213A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				43EAF6D81C46389400AD213A /* main.m */,
+				43EAF6D81C46389400AD213A /* main.mm */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		43EAF6FC1C46BE2E00AD213A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43EAF72D1C46BEC900AD213A /* libz.tbd */,
+				43EAF7071C46BEB800AD213A /* libFreeImage.a */,
+				43EAF7081C46BEB800AD213A /* libFreeType.a */,
+				43EAF7091C46BEB800AD213A /* libglsl_optimizer.a */,
+				43EAF70A1C46BEB800AD213A /* libhlsl2glsl.a */,
+				43EAF70B1C46BEB800AD213A /* libOgreMainStatic.a */,
+				43EAF70C1C46BEB800AD213A /* libOgreOverlayStatic.a */,
+				43EAF70D1C46BEB800AD213A /* libOgrePagingStatic.a */,
+				43EAF70E1C46BEB800AD213A /* libOgrePropertyStatic.a */,
+				43EAF70F1C46BEB800AD213A /* libOgreRTShaderSystemStatic.a */,
+				43EAF7101C46BEB800AD213A /* libOgreTerrainStatic.a */,
+				43EAF7111C46BEB800AD213A /* libOgreVolumeStatic.a */,
+				43EAF7121C46BEB800AD213A /* libOIS.a */,
+				43EAF7131C46BEB800AD213A /* libPlugin_BSPSceneManagerStatic.a */,
+				43EAF7141C46BEB800AD213A /* libPlugin_OctreeSceneManagerStatic.a */,
+				43EAF7151C46BEB800AD213A /* libPlugin_OctreeZoneStatic.a */,
+				43EAF7161C46BEB800AD213A /* libPlugin_ParticleFXStatic.a */,
+				43EAF7171C46BEB800AD213A /* libPlugin_PCZSceneManagerStatic.a */,
+				43EAF7181C46BEB800AD213A /* libRenderSystem_GLES2Static.a */,
+				43EAF7191C46BEB800AD213A /* libzzip.a */,
+				43EAF6FD1C46BE4200AD213A /* libboost_atomic.a */,
+				43EAF6FE1C46BE4200AD213A /* libboost_chrono.a */,
+				43EAF6FF1C46BE4200AD213A /* libboost_date_time.a */,
+				43EAF7001C46BE4200AD213A /* libboost_system.a */,
+				43EAF7011C46BE4200AD213A /* libboost_thread.a */,
+				43EAF6F61C46BE1B00AD213A /* AVFoundation.framework */,
+				43EAF6F71C46BE1B00AD213A /* CoreFoundation.framework */,
+				43EAF6F81C46BE1B00AD213A /* Foundation.framework */,
+				43EAF6F41C46BE0B00AD213A /* CoreGraphics.framework */,
+				43EAF6F21C46BE0600AD213A /* UIKit.framework */,
+				43EAF6F01C46BE0000AD213A /* QuartzCore.framework */,
+				43EAF6EE1C46BDF200AD213A /* OpenGLES.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		43EAF72F1C46C39600AD213A /* Ogre */ = {
+			isa = PBXGroup;
+			children = (
+				43EAF7401C473D0E00AD213A /* Data */,
+				43EAF7301C46C39E00AD213A /* BaseApplication.h */,
+				43EAF7321C46C39E00AD213A /* BaseApplication.cpp */,
+				43EAF7311C46C39E00AD213A /* TutorialApplication.h */,
+				43EAF7331C46C39E00AD213A /* TutorialApplication.cpp */,
+				43125A211C4773530062019F /* OgreStaticPluginLoader.h */,
+			);
+			path = Ogre;
+			sourceTree = "<group>";
+		};
+		43EAF7401C473D0E00AD213A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				43125A271C48F30C0062019F /* Media */,
+				43125A241C48F1F80062019F /* Configs */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +315,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				43EAF6E71C46389400AD213A /* LaunchScreen.storyboard in Resources */,
+				43125A281C48F30C0062019F /* Media in Resources */,
+				43125A261C48F1F80062019F /* resources.cfg in Resources */,
 				43EAF6E41C46389400AD213A /* Assets.xcassets in Resources */,
 				43EAF6E21C46389400AD213A /* Main.storyboard in Resources */,
 			);
@@ -150,8 +330,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				43EAF6DF1C46389400AD213A /* ViewController.m in Sources */,
-				43EAF6DC1C46389400AD213A /* AppDelegate.m in Sources */,
-				43EAF6D91C46389400AD213A /* main.m in Sources */,
+				43EAF6DC1C46389400AD213A /* AppDelegate.mm in Sources */,
+				43EAF6D91C46389400AD213A /* main.mm in Sources */,
+				43EAF7351C46C39E00AD213A /* TutorialApplication.cpp in Sources */,
+				43EAF7341C46C39E00AD213A /* BaseApplication.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,8 +443,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/OgreSDK/include",
+					"$(SRCROOT)/OgreSDK/include/OGRE/**",
+					"$(SRCROOT)/OgreSDK/include/OIS/**",
+				);
 				INFOPLIST_FILE = TestOrge3D/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OgreSDK/lib",
+					"$(PROJECT_DIR)/OgreSDK/lib/Release",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.yang.TestOrge3D;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -272,8 +467,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/OgreSDK/include",
+					"$(SRCROOT)/OgreSDK/include/OGRE/**",
+					"$(SRCROOT)/OgreSDK/include/OIS/**",
+				);
 				INFOPLIST_FILE = TestOrge3D/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OgreSDK/lib",
+					"$(PROJECT_DIR)/OgreSDK/lib/Release",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.yang.TestOrge3D;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -298,6 +506,7 @@
 				43EAF6ED1C46389400AD213A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
