@@ -31,20 +31,6 @@ void TutorialApplication::createScene(void)
 {
     // Create your scene here :)
     
-    mSceneMgr->setAmbientLight(Ogre::ColourValue(0.7f, 0.7f, 0.7f));
-    mSceneMgr->setSkyBox(true, "Examples/SpaceSkyBox");
-    
-    mSceneMgr->createLight("Light")->setPosition(75,75,75);
-    
-    mSceneMgr->setAmbientLight(Ogre::ColourValue(0.5, 0.5, 0.5));
-    Ogre::Entity* ogreEntity = mSceneMgr->createEntity("ogrehead.mesh");
-    Ogre::SceneNode* ogreNode = mSceneMgr->getRootSceneNode()->createChildSceneNode();
-    ogreNode->attachObject(ogreEntity);
-    
-    
-    Ogre::Light* light = mSceneMgr->createLight("MainLight");
-    light->setPosition(0, 0, 0);
-    
 }
 
 
