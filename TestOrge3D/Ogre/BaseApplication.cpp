@@ -138,6 +138,7 @@ void BaseApplication::createFrameListener(void)
 
     mInputContext.mKeyboard = mKeyboard;
     mInputContext.mMouse = mMouse;
+#endif
     mTrayMgr = new OgreBites::SdkTrayManager("InterfaceName", mWindow, mInputContext, this);
     mTrayMgr->showFrameStats(OgreBites::TL_BOTTOMLEFT);
     mTrayMgr->showLogo(OgreBites::TL_BOTTOMRIGHT);
@@ -163,7 +164,7 @@ void BaseApplication::createFrameListener(void)
     mDetailsPanel->hide();
 
     mRoot->addFrameListener(this);
-#endif
+
 }
 //---------------------------------------------------------------------------
 void BaseApplication::destroyScene(void)
@@ -405,7 +406,7 @@ bool BaseApplication::frameRenderingQueued(const Ogre::FrameEvent& evt)
     // Need to capture/update each device
     mKeyboard->capture();
     mMouse->capture();
-
+#endif
     mTrayMgr->frameRenderingQueued(evt);
 
     if (!mTrayMgr->isDialogVisible())
@@ -422,7 +423,7 @@ bool BaseApplication::frameRenderingQueued(const Ogre::FrameEvent& evt)
             mDetailsPanel->setParamValue(7, Ogre::StringConverter::toString(mCamera->getDerivedOrientation().z));
         }
     }
-#endif
+
     return true;
 }
 #if OGRE_PLATFORM != OGRE_PLATFORM_APPLE_IOS
