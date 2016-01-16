@@ -26,7 +26,6 @@ http://www.ogre3d.org/wiki/
 #include <OgreSceneManager.h>
 #include <OgreRenderWindow.h>
 #include <OgreConfigFile.h>
-#include <OgreRTShaderSystem.h>
 
 #if OGRE_PLATFORM == OGRE_PLATFORM_APPLE
 #  include <OIS/OISEvents.h>
@@ -37,33 +36,35 @@ http://www.ogre3d.org/wiki/
 #  include <OGRE/SdkTrays.h>
 #  include <OGRE/SdkCameraMan.h>
 #elif OGRE_PLATFORM == OGRE_PLATFORM_APPLE_IOS
+#  include <OgreRTShaderSystem.h>
+#  include <SdkTrays.h>
+#  include <SdkCameraMan.h>
 #else
 #  include <OISEvents.h>
 #  include <OISInputManager.h>
 #  include <OISKeyboard.h>
 #  include <OISMouse.h>
-#endif
 
 #  include <SdkTrays.h>
 #  include <SdkCameraMan.h>
-
+#endif
 
 #ifdef OGRE_STATIC_LIB
 #  if OGRE_PLATFORM == OGRE_PLATFORM_APPLE_IOS
 #    define OGRE_STATIC_GLES2
 #  else
 #    define OGRE_STATIC_GL
-#  endif
-#  if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
-#    define OGRE_STATIC_Direct3D9
-// D3D10 will only work on vista, so be careful about statically linking
-#    if OGRE_USE_D3D10
-#      define OGRE_STATIC_Direct3D10
+#    if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
+#      define OGRE_STATIC_Direct3D9
+//   D3D10 will only work on vista, so be careful about statically linking
+#      if OGRE_USE_D3D10
+#        define OGRE_STATIC_Direct3D10
+#      endif
 #    endif
+#    define OGRE_STATIC_CgProgramManager
 #  endif
 #  define OGRE_STATIC_BSPSceneManager
 #  define OGRE_STATIC_ParticleFX
-//#  define OGRE_STATIC_CgProgramManager
 #  ifdef OGRE_USE_PCZ
 #    define OGRE_STATIC_PCZSceneManager
 #    define OGRE_STATIC_OctreeZone
@@ -96,7 +97,10 @@ protected:
 
 //---------------------------------------------------------------------------
 
-class BaseApplication : public Ogre::FrameListener, public Ogre::WindowEventListener, public OgreBites::SdkTrayListener
+class BaseApplication : public Ogre::FrameListener, public Ogre::WindowEventListener, OgreBites::SdkTrayListener
+#if OGRE_PLATFORM != OGRE_PLATFORM_APPLE_IOS
+, public OIS::KeyListener, public OIS::MouseListener
+#endif
 {
 public:
     BaseApplication(void);
@@ -120,15 +124,16 @@ protected:
     virtual void createResourceListener(void);
     virtual void loadResources(void);
     virtual bool frameRenderingQueued(const Ogre::FrameEvent& evt);
-
+#if OGRE_PLATFORM == OGRE_PLATFORM_APPLE_IOS
     virtual bool initializeRTShaderSystem();
     virtual void terminateRTShaderSystem();
-    
-//    virtual bool keyPressed(const OIS::KeyEvent &arg);
-//    virtual bool keyReleased(const OIS::KeyEvent &arg);
-//    virtual bool mouseMoved(const OIS::MouseEvent &arg);
-//    virtual bool mousePressed(const OIS::MouseEvent &arg, OIS::MouseButtonID id);
-//    virtual bool mouseReleased(const OIS::MouseEvent &arg, OIS::MouseButtonID id);
+#else
+    virtual bool keyPressed(const OIS::KeyEvent &arg);
+    virtual bool keyReleased(const OIS::KeyEvent &arg);
+    virtual bool mouseMoved(const OIS::MouseEvent &arg);
+    virtual bool mousePressed(const OIS::MouseEvent &arg, OIS::MouseButtonID id);
+    virtual bool mouseReleased(const OIS::MouseEvent &arg, OIS::MouseButtonID id);
+#endif
 
     // Adjust mouse clipping area
     virtual void windowResized(Ogre::RenderWindow* rw);
@@ -151,17 +156,18 @@ protected:
     OgreBites::ParamsPanel*     mDetailsPanel;   	// Sample details panel
     bool                        mCursorWasVisible;	// Was cursor visible before dialog appeared?
     bool                        mShutDown;
-
+#if OGRE_PLATFORM != OGRE_PLATFORM_APPLE_IOS
     //OIS Input devices
-//    OIS::InputManager*          mInputManager;
-//    OIS::Mouse*                 mMouse;
-//    OIS::Keyboard*              mKeyboard;
+    OIS::InputManager*          mInputManager;
+    OIS::Mouse*                 mMouse;
+    OIS::Keyboard*              mKeyboard;
+#else
+    Ogre::RTShader::ShaderGenerator* mShaderGenerator; // The Shader generator instance.
+    ShaderGeneratorTechniqueResolverListener* mMaterialMgrListener; // Shader generator material manager listener.
+#endif
 
     // Added for Mac compatibility
     Ogre::String                 m_ResourcePath;
-    
-    Ogre::RTShader::ShaderGenerator* mShaderGenerator; // The Shader generator instance.
-    ShaderGeneratorTechniqueResolverListener* mMaterialMgrListener; // Shader generator material manager listener.
 
 #ifdef OGRE_STATIC_LIB
     Ogre::StaticPluginLoader m_StaticPluginLoader;
